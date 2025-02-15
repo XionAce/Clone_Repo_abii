@@ -245,6 +245,37 @@ button:hover {
 }
 
 
+
+/* Normal state - text is clear */
+.mini-box .box-text,
+.mini-box .message-box {
+    filter: blur(0px);  /* No blur */
+    user-select: auto;  /* Allow selection */
+    pointer-events: auto;  /* Allow interaction */
+}
+
+/* When zoomed, blur the text */
+.mini-box.zoomed .box-text,
+.mini-box.zoomed .message-box {
+    filter: blur(6px); /* Apply blur effect */
+    pointer-events: none; /* Disable interaction */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Mini header for the third section with cylindrical shape */
 .music-header {
     position: relative;
@@ -582,4 +613,13 @@ html {
     right: 50%;
     margin-left: -50vw; /* Adjusts line to span full width */
     margin-right: -50vw; /* Ensures no space is left on the right */
+}
+
+
+.last-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }

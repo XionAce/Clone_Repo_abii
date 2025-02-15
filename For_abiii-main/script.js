@@ -97,14 +97,12 @@ progressBar.addEventListener("click", (e) => {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    const letterText = `
-Note:
-1.) Don't mind the grammar hehe
-2.) Finish reading the text(basaha please 🥹)
+    const clearText = `Note:\n1.) Taposa kay naay surprised sa last\n`;
+    
+    const blurryText = `
+Hi lovieee..... First of all, happy Valentines po mahal ko hehe.... Pangalawang beses na us nag Valentines na magkasama.. Pero di man us nag ddate or what so ever🥹...... Lagi namn us nag cecelebrate po kahit di Valentines hehe..... Im very very happy po dahil kasama kita po like fr ba huhu.. Anyways, im very lucky to have u po like fr, despite of our conflicts and misunderstandings, still nagkakaayos padin us.. belated happy monthsary din po hehe kahit nag greet na me sayo i greet padin kita po.. Thankss po sa pag-care sakin po hehe kahit minsan inaaway mo me po lalo na sa mga time na sinasagad mo patients ko🤗... I really appreciate ur efforts sakin and everything po like fr lahat pp.... Thanks din da patience po hehe i know masyadong makulit me minsan po and nababanas na kita minsan sa sobrang kulit ko hehe way ko lang yun to express my love po sayo... Lambing ko yun po ah🥹...
 
-Hi lovieee..... First of all, happy Valentines po mahal ko hehe.... Pangalawamg bese na us nag valentines na mag kasama.. Pero di man us nag ddate or what so ever🥹...... Lagi namn us nag cecelebrate po kahit di valentines hehe..... Im very very happy po dahil na kasama kita po like fr ba huhu.. Anyways, im very lucky to have u po like fr, despite of our conflicts and misunderstandings still nag kakaayos padin us.. belated happy monthsary din po hehe kahit nag greet na me sayo i greet padin kita po.. Thankss po sa pag care sakin po hehe kahit minsan inaaway mo me po lalo na sa mga time na sinasagad mo patients ko🤗... I really appreciate ur efforts sakin and everything po like fr lahat pp.... Thanks din da patients po hehe i know msyadong makulit me minsan po and nababanas na kita minsan sa subrang kulit ko hehe way ko lang yun to express my love po sayo... Lambing ko yun po ah🥹...
-
- Anyways, happy Valentines po loviee ko hehe.... Wala me gift sayo pero meron kuan me sayo hehe
+Anyways, happy Valentines po loviee ko hehe.... Wala me gift sayo pero meron kuan me sayo hehe
 
 Click mo lang yung heart sa baba po \n\n`; // Ends before the heart
 
@@ -117,9 +115,24 @@ Click mo lang yung heart sa baba po \n\n`; // Ends before the heart
 
     let index = 0;
 
+    // Add clear text first (Note section)
+    let clearSpan = document.createElement("span");
+    clearSpan.textContent = clearText;
+    letterElement.appendChild(clearSpan);
+
+    // Wrap the blurry text in a span
+    let blurrySpan = document.createElement("span");
+    blurrySpan.style.filter = "blur(6px)"; // Initially blurred
+    blurrySpan.style.cursor = "pointer";
+    blurrySpan.onclick = function () {
+        blurrySpan.style.filter = "none"; // Reveal text when clicked
+    };
+
+    letterElement.appendChild(blurrySpan);
+
     function typeLetter() {
-        if (index < letterText.length) {
-            letterElement.textContent += letterText.charAt(index);
+        if (index < blurryText.length) {
+            blurrySpan.textContent += blurryText.charAt(index);
             index++;
             setTimeout(typeLetter, 40); // Adjust speed here
         } else {
@@ -136,4 +149,13 @@ Click mo lang yung heart sa baba po \n\n`; // Ends before the heart
     }
 
     typeLetter(); // Start typing effect
+});
+
+// Ensure Mo.js animation triggers on page load
+window.addEventListener('load', () => {
+    const lastSection = document.querySelector('.last-section');
+    if (lastSection) {
+        const loveTl = crtLoveTl().play();
+        loveTl.replay();
+    }
 });
