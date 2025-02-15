@@ -97,7 +97,9 @@ progressBar.addEventListener("click", (e) => {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    const clearText = `Note:\n1.) Taposa kay naay surprise sa last(katapos mag generate\n`;
+    const clearText = `Note:\n:
+1.) Don't mind the grammar hehe\n2.) Finish reading the text(basaha please 🥹)
+\n`;
     
     const blurryText = `
 Hi lovieee..... First of all, happy Valentines po mahal ko hehe.... Pangalawang beses na us nag Valentines na magkasama.. Pero di man us nag ddate or what so ever🥹...... Lagi namn us nag cecelebrate po kahit di Valentines hehe..... Im very very happy po dahil kasama kita po like fr ba huhu.. Anyways, im very lucky to have u po like fr, despite of our conflicts and misunderstandings, still nagkakaayos padin us.. belated happy monthsary din po hehe kahit nag greet na me sayo i greet padin kita po.. Thankss po sa pag-care sakin po hehe kahit minsan inaaway mo me po lalo na sa mga time na sinasagad mo patients ko🤗... I really appreciate ur efforts sakin and everything po like fr lahat pp.... Thanks din da patience po hehe i know masyadong makulit me minsan po and nababanas na kita minsan sa sobrang kulit ko hehe way ko lang yun to express my love po sayo... Lambing ko yun po ah🥹...
