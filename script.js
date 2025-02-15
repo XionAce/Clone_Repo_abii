@@ -97,8 +97,7 @@ progressBar.addEventListener("click", (e) => {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    const clearText = `Note:\n:
-1.) Don't mind the grammar hehe\n2.) Finish reading the text(basaha please 🥹)
+    const clearText = `Note:\n1.) Don't mind the grammar hehe\n2.) Finish reading the text(basaha please 🥹)
 \n`;
     
     const blurryText = `
